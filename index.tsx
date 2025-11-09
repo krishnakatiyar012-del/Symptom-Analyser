@@ -24,6 +24,7 @@ const translations = {
     profile: "Profile", logout: "Logout", language: "Language",
     dashboard: "Dashboard", consult: "Consult", diagnose: "Diagnose", reports: "Reports",
     dashboardWelcome: "Welcome, User!", dashboardSubheading: "Your personal health assistant is ready.", startNewDiagnosis: "Start New Diagnosis", startNewDiagnosisSub: "Describe your symptoms to get a preliminary analysis.", viewPastReports: "View Past Reports", viewPastReportsSub: "Access your previous symptom analysis reports.",
+    goodMorning: "Good morning, Ram", yourHealthRisk: "Your health risk", checkSymptoms: "Check Symptoms", aiInsight: "AI Insight", yourHealthTrend: "Your Health Trend", personalizedTips: "Personalized Tips", communitySnapshot: "Community Snapshot", recentReports: "Recent Reports",
     yourReports: "Your Reports", noReports: "You don't have any reports yet.", backToList: "← Back to List", complaint: "Complaint", date: "Date", patientComplaint: "Patient's Initial Complaint", symptomImages: "Symptom Images", diagnosticQA: "Diagnostic Q&A", preliminaryAssessment: "Preliminary Assessment",
     yourProfile: "Your Profile", editProfile: "Edit Profile", saveChanges: "Save Changes", cancel: "Cancel",
     medicalDisclaimer: "Medical Disclaimer", disclaimerText: "SymptomAI is an AI-powered informational tool and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.", iUnderstandAndAgree: "I Understand and Agree", describeSymptoms: "Describe your symptoms in detail:", describeSymptomsPlaceholder: "e.g., I have a sore throat, a headache, and a rash on my arm...", uploadPhotos: "Upload photos of visible symptoms (optional):", clickToSelectImages: "Click to select images", startAnalysis: "Start Analysis", analyzing: "Analyzing...",
@@ -73,6 +74,7 @@ const translations = {
     profile: "Perfil", logout: "Cerrar Sesión", language: "Idioma",
     dashboard: "Inicio", consult: "Consulta", diagnose: "Diagnóstico", reports: "Informes",
     dashboardWelcome: "¡Bienvenido, Usuario!", dashboardSubheading: "Tu asistente de salud personal está listo.", startNewDiagnosis: "Iniciar Nuevo Diagnóstico", startNewDiagnosisSub: "Describe tus síntomas para obtener un análisis preliminar.", viewPastReports: "Ver Informes Anteriores", viewPastReportsSub: "Accede a tus informes de análisis de síntomas previos.",
+    goodMorning: "Buenos días, Ram", yourHealthRisk: "Tu riesgo de salud", checkSymptoms: "Revisar Síntomas", aiInsight: "Análisis IA", yourHealthTrend: "Tu Tendencia de Salud", personalizedTips: "Consejos Personalizados", communitySnapshot: "Resumen Comunitario", recentReports: "Informes Recientes",
     yourReports: "Tus Informes", noReports: "Aún no tienes informes.", backToList: "← Volver a la Lista", complaint: "Queja", date: "Fecha", patientComplaint: "Queja Inicial del Paciente", symptomImages: "Imágenes de Síntomas", diagnosticQA: "Preguntas y Respuestas de Diagnóstico", preliminaryAssessment: "Evaluación Preliminar",
     yourProfile: "Tu Perfil", editProfile: "Editar Perfil", saveChanges: "Guardar Cambios", cancel: "Cancelar",
     medicalDisclaimer: "Aviso Médico", disclaimerText: "SymptomAI es una herramienta informativa impulsada por IA y no sustituye el consejo, diagnóstico o tratamiento médico profesional. Siempre busca el consejo de tu médico u otro proveedor de salud calificado con cualquier pregunta que puedas tener sobre una condición médica.", iUnderstandAndAgree: "Entiendo y Acepto", describeSymptoms: "Describe tus síntomas en detalle:", describeSymptomsPlaceholder: "Ej., tengo dolor de garganta, dolor de cabeza y una erupción en el brazo...", uploadPhotos: "Sube fotos de síntomas visibles (opcional):", clickToSelectImages: "Haz clic para seleccionar imágenes", startAnalysis: "Iniciar Análisis", analyzing: "Analizando...",
@@ -122,6 +124,7 @@ const translations = {
     profile: "प्रोफ़ाइल", logout: "लॉग आउट", language: "भाषा",
     dashboard: "डैशबोर्ड", consult: "परामर्श", diagnose: "निदान", reports: "रिपोर्ट",
     dashboardWelcome: "आपका स्वागत है, उपयोगकर्ता!", dashboardSubheading: "आपका व्यक्तिगत स्वास्थ्य सहायक तैयार है।", startNewDiagnosis: "नया निदान शुरू करें", startNewDiagnosisSub: "प्रारंभिक विश्लेषण प्राप्त करने के लिए अपने लक्षणों का वर्णन करें।", viewPastReports: "पिछली रिपोर्ट देखें", viewPastReportsSub: "अपनी पिछली लक्षण विश्लेषण रिपोर्ट तक पहुँचें।",
+    goodMorning: "सुप्रभात, राम", yourHealthRisk: "आपका स्वास्थ्य जोखिम", checkSymptoms: "लक्षणों की जाँच करें", aiInsight: "एआई अंतर्दृष्टि", yourHealthTrend: "आपकी स्वास्थ्य प्रवृत्ति", personalizedTips: "व्यक्तिगत सुझाव", communitySnapshot: "सामुदायिक स्नैपशॉट", recentReports: "हाल की रिपोर्ट",
     yourReports: "आपकी रिपोर्ट", noReports: "आपके पास अभी तक कोई रिपोर्ट नहीं है।", backToList: "← सूची पर वापस", complaint: "शिकायत", date: "तारीख", patientComplaint: "रोगी की प्रारंभिक शिकायत", symptomsImages: "लक्षणों की छवियाँ", diagnosticQA: "निदान संबंधी प्रश्नोत्तर", preliminaryAssessment: "प्रारंभिक मूल्यांकन",
     yourProfile: "आपकी प्रोफ़ाइल", editProfile: "प्रोफ़ाइल संपादित करें", saveChanges: "बदलाव सहेजें", cancel: "रद्द करें",
     medicalDisclaimer: "चिकित्सा अस्वीकरण", disclaimerText: "सिम्प्टमएआई एक एआई-संचालित सूचनात्मक उपकरण है और यह पेशेवर चिकित्सा सलाह, निदान या उपचार का विकल्प नहीं है। किसी भी चिकित्सा स्थिति के बारे में आपके किसी भी प्रश्न के लिए हमेशा अपने चिकित्सक या अन्य योग्य स्वास्थ्य प्रदाता की सलाह लें।", iUnderstandAndAgree: "मैं समझता हूं और सहमत हूं", describeSymptoms: "अपने लक्षणों का विस्तार से वर्णन करें:", describeSymptomsPlaceholder: "जैसे, मेरे गले में खराश, सिरदर्द और बांह पर दाने हैं...", uploadPhotos: "दिखने वाले लक्षणों की तस्वीरें अपलोड करें (वैकल्पिक):", clickToSelectImages: "छवियां चुनने के लिए क्लिक करें", startAnalysis: "विश्लेषण शुरू करें", analyzing: "विश्लेषण हो रहा है...",
@@ -251,63 +254,38 @@ const api = {
     const allReports = RealTimeDB.get("reports");
     const userReports = allReports[email] || [];
     if (userReports && userReports.length > 0) {
-      return userReports;
+      return userReports.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
     }
     const dummyReports: StoredReport[] = [
       {
-        id: 'dummy_report_1',
-        timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+        id: 'dummy_report_flu',
+        timestamp: '2024-07-23T12:00:00Z',
         data: {
-          patientComplaint: "Persistent headache and sensitivity to light for the past 2 days.",
-          symptomImages: [],
-          diagnosticQuestions: [
-            { question: "Have you experienced any nausea?", answer: "Yes, a little bit." },
-            { question: "Is the headache on one side of your head?", answer: "Yes, primarily on the right side." }
-          ],
-          preliminaryAssessment: {
-            potentialConditions: [
-              { name: "Migraine", confidence: "High", keyIndicators: ["Unilateral headache", "Photophobia", "Nausea"] }
-            ]
-          }
+          patientComplaint: "Flu",
+          symptomImages: [], diagnosticQuestions: [],
+          preliminaryAssessment: { potentialConditions: [ { name: "Flu", confidence: "High", keyIndicators: [] } ] }
         }
       },
       {
-        id: 'dummy_report_2',
-        timestamp: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000).toISOString(),
+        id: 'dummy_report_cold',
+        timestamp: '2024-07-23T11:00:00Z',
         data: {
-          patientComplaint: "Itchy red rash on my arm that has been spreading over the last week.",
-          symptomImages: [],
-          diagnosticQuestions: [
-            { question: "Have you come into contact with any new plants or substances?", answer: "I was gardening last weekend." },
-            { question: "Is the rash blistering?", answer: "No, it's just red and bumpy." }
-          ],
-          preliminaryAssessment: {
-            potentialConditions: [
-              { name: "Contact Dermatitis", confidence: "Medium", keyIndicators: ["Localized rash", "Itching", "Recent contact with potential irritant"] },
-              { name: "Eczema", confidence: "Low", keyIndicators: ["Redness", "Itching"] }
-            ]
-          }
+          patientComplaint: "Common Cold",
+          symptomImages: [], diagnosticQuestions: [],
+          preliminaryAssessment: { potentialConditions: [ { name: "Common Cold", confidence: "Medium", keyIndicators: [] } ] }
         }
       },
       {
-        id: 'dummy_report_3',
-        timestamp: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+        id: 'dummy_report_allergy',
+        timestamp: '2024-07-19T09:00:00Z',
         data: {
-          patientComplaint: "Sore throat, cough, and a runny nose for three days.",
-          symptomImages: [],
-          diagnosticQuestions: [
-            { question: "Do you have a fever?", answer: "Yes, a low-grade one." },
-            { question: "Are you experiencing body aches?", answer: "Yes, mild aches all over." }
-          ],
-          preliminaryAssessment: {
-            potentialConditions: [
-              { name: "Viral Pharyngitis (Common Cold)", confidence: "High", keyIndicators: ["Sore throat", "Low-grade fever", "Cough", "Runny nose"] }
-            ]
-          }
+          patientComplaint: "Allergy",
+          symptomImages: [], diagnosticQuestions: [],
+          preliminaryAssessment: { potentialConditions: [ { name: "Allergy", confidence: "Low", keyIndicators: [] } ] }
         }
-      }
+      },
     ];
-    return dummyReports.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+    return dummyReports;
   },
   saveReport: async (email: string, reportData: ReportData): Promise<void> => { await api._delay(150); const allReports = RealTimeDB.get("reports"); const userReports = allReports[email] || []; const newReport: StoredReport = { id: `report_${Date.now()}`, timestamp: new Date().toISOString(), data: reportData, }; allReports[email] = [newReport, ...userReports]; RealTimeDB.set("reports", allReports); },
 };
@@ -570,7 +548,12 @@ const Header = ({ onLogout, onNavigate }: { onLogout: () => void, onNavigate: (p
     const handleLogoutClick = (e: React.MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); onLogout(); }
     return (
         <header className="app-header-main">
-            <div className="logo">ArogyaAI</div>
+            <div className="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.4766 2.99992C14.7633 2.99992 13.1166 3.79992 11.9999 5.12492C10.8833 3.79992 9.23658 2.99992 7.52325 2.99992C4.98325 2.99992 2.99992 5.04992 2.99992 7.64992C2.99992 10.3333 4.14992 12.8916 6.44992 15.2249L11.9999 20.8499L17.5499 15.2249C19.8499 12.8916 20.9999 10.3333 20.9999 7.64992C20.9999 5.04992 19.0166 2.99992 16.4766 2.99992Z" />
+                </svg>
+                ArogyaAI
+            </div>
             <div className="profile-menu">
                 <button onClick={() => setDropdownOpen(!dropdownOpen)} className="profile-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></button>
                 {dropdownOpen && (
@@ -604,13 +587,144 @@ const FooterNav = ({ activePage, onNavigate }: { activePage: ActivePage, onNavig
 
 // --- Page Components ---
 const DashboardPage = ({ user, onNavigate }: { user: User, onNavigate: (page: ActivePage) => void }) => {
-    const { t } = useTranslation();
+    const { t, language } = useTranslation();
+    const { reports } = useReports(user.email);
+    const riskPercentage = 68;
+    const circumference = 2 * Math.PI * 45; // radius = 45
+    const offset = circumference - (riskPercentage / 100) * circumference;
+
+    const getRiskLevel = (percentage: number) => {
+        if (percentage < 40) return "Low";
+        if (percentage < 70) return "Medium";
+        return "High";
+    }
+
+    const getTagForReport = (report: StoredReport): {text: string, className: string} => {
+        const confidence = report.data.preliminaryAssessment.potentialConditions[0]?.confidence || 'Low';
+        switch (confidence) {
+            case 'High': return { text: 'High', className: 'tag high' };
+            case 'Medium': return { text: 'Medium', className: 'tag medium' };
+            default: return { text: 'Low', className: 'tag low' };
+        }
+    }
+    
+    const getIconForReport = (report: StoredReport) => {
+        const title = report.data.patientComplaint.toLowerCase();
+        const confidence = report.data.preliminaryAssessment.potentialConditions[0]?.confidence || 'Low';
+        const color = confidence === 'High' ? 'var(--danger-color)' : confidence === 'Medium' ? 'var(--warning-color)' : 'var(--secondary-color)';
+        
+        if (title.includes('flu')) return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={color} viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>;
+        if (title.includes('cold')) return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill={color}><path d="m8 0 6.062 6.062a1.5 1.5 0 0 1-2.122 2.122L8 4.244 3.06 9.182a1.5 1.5 0 1 1-2.122-2.122z M8 16l-6.062-6.062a1.5 1.5 0 0 1 2.122-2.122L8 11.756l4.94-4.94a1.5 1.5 0 0 1 2.122 2.122z"/></svg>;
+        return <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={color} viewBox="0 0 16 16"><path d="M8.5 2.687c.654-.689 1.782-.886 2.832-.398.88.403 1.628 1.12 2.064 2.125.437 1.005.372 2.24.083 3.29l-1.06.982-4.32-3.818 1.399-.982Z"/><path d="M12.162 8.012 7.843 11.83 3.525 8.012c-1.332-1.23-1.66-3.328-.868-4.834C3.407 1.678 5.155.93 6.697 1.49c1.542.56 2.53 2.082 2.53 3.737v.228a3.97 3.97 0 0 1-.354.192c-.37-.58-.885-1.12-1.514-1.565a3.3 3.3 0 0 0-2.07-.63c-1.812 0-3.288 1.477-3.288 3.288 0 1.27.71 2.37 1.756 2.923l4.318 3.825 4.318-3.825c1.046-.553 1.756-1.652 1.756-2.923 0-1.81-1.476-3.288-3.288-3.288a3.3 3.3 0 0 0-2.07.63c-.63.445-1.145.986-1.515 1.565A3.97 3.97 0 0 1 9.228 9a4 4 0 0 1 2.934-1.012z"/></svg>;
+    }
+
+
     return (
-    <div className="page-content dashboard-page">
-        <h2>{t('dashboardWelcome')}</h2><p>{t('dashboardSubheading')}</p>
-        <div className="dashboard-actions">
-            <div className="action-card" onClick={() => onNavigate('diagnose')}><h3>{t('startNewDiagnosis')}</h3><p>{t('startNewDiagnosisSub')}</p></div>
-            <div className="action-card" onClick={() => onNavigate('reports')}><h3>{t('viewPastReports')}</h3><p>{t('viewPastReportsSub')}</p></div>
+    <div className="dashboard-page">
+        <div className="greeting">
+            <h2>{t('goodMorning')}</h2>
+            <div className="user-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V13H5V6.3l7-3.11v10.8z"/></svg>
+            </div>
+        </div>
+        
+        <div className="dashboard-grid">
+            <div className="dashboard-card health-risk-card">
+                <div className="progress-ring">
+                     <svg width="150" height="150" viewBox="0 0 100 100">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stopColor="#3EE0D7" />
+                                <stop offset="100%" stopColor="#FF8C42" />
+                            </linearGradient>
+                        </defs>
+                        <circle className="progress-ring-bg" stroke="rgba(255,255,255,0.1)" strokeWidth="10" fill="transparent" r="45" cx="50" cy="50"/>
+                        <circle className="progress-ring-circle" stroke="url(#gradient)" strokeWidth="10" fill="transparent" r="45" cx="50" cy="50"
+                          strokeDasharray={circumference}
+                          strokeDashoffset={offset}
+                          strokeLinecap="round"
+                        />
+                    </svg>
+                    <div className="progress-ring-content">
+                        <span className="risk-label">{t('yourHealthRisk')}</span>
+                        <span className="percentage">{riskPercentage}%</span>
+                        <span className="level">{getRiskLevel(riskPercentage)}</span>
+                    </div>
+                </div>
+                <button className="button" onClick={() => onNavigate('diagnose')}>{t('checkSymptoms')}</button>
+            </div>
+
+            <div className="dashboard-card ai-insight-card">
+                <h3>{t('aiInsight')}</h3>
+                <p>AI detected a. 22% drop in fever cases this week.</p>
+            </div>
+
+            <div className="dashboard-card health-trend-card">
+                 <h3>{t('yourHealthTrend')}</h3>
+                 <div className="health-trend-chart">
+                    <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                        <path d="M 0 30 Q 15 10, 30 20 T 60 15 T 90 25 L 100 20" stroke="#3EE0D7" strokeWidth="2" fill="none" />
+                        <circle cx="90" cy="25" r="2" fill="#FF8C42" stroke="#040C1A" strokeWidth="1"/>
+                    </svg>
+                 </div>
+                 <div className="health-trend-labels">
+                    <span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>M</span>
+                 </div>
+            </div>
+
+            <div className="dashboard-card personalized-tips-card">
+                <h3>{t('personalizedTips')}</h3>
+                <ul>
+                    <li>
+                       <div className="tip-icon sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zm-5-8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm11 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-9.328 6.328a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm10.607-10.607a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM1.672 2.379a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L1.672 3.086a.5.5 0 0 1 0-.707zm10.607 10.607a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0z"/></svg>
+                       </div>
+                       <span>Hydrate more – your reports show mild dehydration.</span>
+                    </li>
+                     <li>
+                       <div className="tip-icon food">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.21.182a.5.5 0 0 1 .44.02L15.34 4.1a.5.5 0 0 1 .16.489V11a.5.5 0 0 1-.5.5h-3.465a.5.5 0 0 1-.339-.146L8 7.332 4.66.146A.5.5 0 0 1 4.5.5H.5a.5.5 0 0 1-.5-.5V4.59a.5.5 0 0 1 .16-.49l6.89-3.932a.5.5 0 0 1 .44-.018zM1.15 4.957 7.72 9.17l6.568-4.213L8.25 1.06 1.15 4.957z"/><path d="m13.298 12.21-4.43-2.585a.5.5 0 0 0-.54.02L3.585 12.21a.5.5 0 0 0-.22.463V15.5a.5.5 0 0 0 .5.5h9.27a.5.5 0 0 0 .5-.5v-2.827a.5.5 0 0 0-.22-.463z"/></svg>
+                       </div>
+                       <span>Add iron-rich foods for energy recovery.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div className="dashboard-card community-snapshot-card">
+                 <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                    {t('communitySnapshot')}
+                 </h3>
+                 <div className="snapshot-item">
+                    <strong>3 new fever cases</strong> in Ujjain block.
+                 </div>
+                 <div className="snapshot-item">
+                    <strong>1 vaccination camp</strong> scheduled tomorrow.
+                 </div>
+            </div>
+
+        </div>
+
+        <div className="recent-reports-section">
+            <h2>{t('recentReports')}</h2>
+            <div className="recent-reports-grid">
+                {reports.slice(0,3).map(report => {
+                    const tag = getTagForReport(report);
+                    const iconColor = tag.className.includes('high') ? 'var(--danger-color)' : tag.className.includes('medium') ? 'var(--warning-color)' : 'var(--secondary-color)';
+                    return (
+                        <div key={report.id} className="report-card-small">
+                            <div className="title">
+                               {getIconForReport(report)}
+                               <span style={{ color: iconColor }}>{report.data.patientComplaint}</span>
+                            </div>
+                            <div className="date">{new Date(report.timestamp).toLocaleDateString(language, { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+                            <div className={tag.className}>
+                                {tag.text} Risk
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     </div>
 )};
