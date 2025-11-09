@@ -105,6 +105,12 @@
         border-radius: 8px;
         font-size: 1rem;
         font-family: var(--font-family);
+        background-color: #fff;
+        color: var(--text-color);
+      }
+      input:disabled {
+        background-color: #f8f9fa;
+        cursor: not-allowed;
       }
       
       /* --- Auth Page --- */
@@ -221,14 +227,36 @@
         flex-direction: column;
         overflow: hidden;
         z-index: 100;
+        width: 160px;
       }
       .dropdown-menu a {
         padding: 0.75rem 1.5rem;
         color: var(--text-color);
         text-decoration: none;
+        display: block;
       }
        .dropdown-menu a:hover {
         background-color: var(--background-color);
+      }
+       .language-selector {
+        padding: 0.75rem 1.5rem;
+        border-top: 1px solid var(--light-gray);
+        border-bottom: 1px solid var(--light-gray);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .language-selector label {
+        font-size: 0.9rem;
+        color: var(--text-color);
+        font-weight: 500;
+      }
+      .language-selector select {
+        width: 100%;
+        border: 1px solid var(--light-gray);
+        border-radius: 4px;
+        padding: 0.25rem;
+        font-size: 0.9rem;
       }
       .app-main-content {
         flex-grow: 1;
@@ -254,11 +282,13 @@
         background: none;
         border: none;
         color: var(--gray);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 500;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 4px;
+        padding: 4px 12px;
       }
        .footer-nav button.active {
         color: var(--secondary-color);
@@ -267,7 +297,232 @@
         color: var(--primary-color);
         transform: none;
       }
+      
+      /* -- Dashboard Page -- */
+      .dashboard-page { text-align: center; }
+      .dashboard-page h2 { color: var(--primary-color); }
+      .dashboard-page p { color: #555; margin-bottom: 2rem; }
+      .dashboard-actions { display: flex; flex-direction: column; gap: 1rem; }
+      .action-card {
+        background-color: var(--surface-color);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid var(--light-gray);
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      }
+      .action-card h3 { color: var(--secondary-color); margin-bottom: 0.5rem;}
+      
+      /* -- Consult Page -- */
+      .consult-page {
+        text-align: center;
+      }
+      .consult-page h2 {
+        margin-bottom: 2rem;
+        color: var(--primary-color);
+      }
+      .location-prompt {
+        background-color: var(--surface-color);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid var(--light-gray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .location-prompt svg {
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+      }
+      .location-prompt h3 {
+        color: var(--primary-color);
+      }
+      .location-prompt p {
+        color: #555;
+        max-width: 350px;
+      }
+      .clinics-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: left;
+      }
+      .clinics-list h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--light-gray);
+      }
+      .clinic-card {
+        background-color: var(--surface-color);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--light-gray);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .clinic-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .clinic-info span {
+        font-size: 0.9rem;
+        color: #555;
+      }
+      .map-button {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: background-color 0.2s;
+      }
+      .map-button:hover {
+        background-color: var(--secondary-color);
+        color: white;
+      }
 
+      .ambulance-section {
+        margin-top: 2rem;
+        text-align: left;
+      }
+      .ambulance-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .ambulance-header h3 {
+        color: var(--primary-color);
+        margin-bottom: 0;
+      }
+      .sos-button {
+        background-color: var(--danger-color);
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background-color 0.2s, transform 0.2s;
+      }
+      .sos-button:hover {
+        background-color: #c9302c; /* A darker red */
+        transform: translateY(-2px);
+      }
+      .ambulance-content {
+        background-color: var(--surface-color);
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid var(--light-gray);
+        text-align: center;
+        color: var(--gray);
+      }
+
+      .doctor-contact-section {
+        margin-top: 2rem;
+        text-align: left;
+      }
+      .doctor-contact-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--light-gray);
+      }
+      .doctor-card {
+        background-color: var(--surface-color);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--light-gray);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .doctor-info {
+        font-weight: 600;
+      }
+      .doctor-actions {
+        display: flex;
+        gap: 0.75rem;
+      }
+      .doctor-actions button {
+        background-color: transparent;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+      }
+      .doctor-actions button:hover {
+        background-color: var(--secondary-color);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* -- Reports Page -- */
+      .reports-list { display: flex; flex-direction: column; gap: 1rem; }
+      .report-item {
+        background-color: var(--surface-color);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--light-gray);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .report-item:hover { background-color: #f8f9fa; }
+      .report-item-summary { font-size: 0.9rem; }
+      .report-item-date { font-size: 0.8rem; color: #555; }
+      .report-detail-view .back-button {
+        margin-bottom: 1.5rem;
+        background-color: transparent;
+        color: var(--secondary-color);
+        padding: 0.5rem 0;
+      }
+      .report-detail-view .back-button:hover { transform: none; background-color: transparent; text-decoration: underline; }
+      
+      /* -- Profile Page -- */
+      .profile-page {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .profile-card {
+          background-color: var(--surface-color);
+          padding: 2rem;
+          border-radius: 12px;
+          border: 1px solid var(--light-gray);
+          width: 100%;
+          max-width: 500px;
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+      }
+      .profile-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; }
+      .logout-button {
+          margin-top: 2rem;
+          background-color: transparent;
+          color: var(--danger-color);
+          border: 1px solid var(--danger-color);
+      }
+      .logout-button:hover { background-color: var(--danger-color); color: white; transform: none; }
+      
       /* --- Symptom Analyzer Specific Styles (nested inside .diagnose-page) --- */
       .diagnose-page .main-content {
         height: 100%;
@@ -301,6 +556,13 @@
       .diagnose-page .chat-mic-button svg { width: 24px; height: 24px; fill: var(--primary-color); }
       .spinner { border: 4px solid var(--light-gray); border-top: 4px solid var(--secondary-color); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; }
       @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .loading-fullscreen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
       .conclusion-card { background-color: var(--surface-color); padding: 1.5rem; border-radius: 12px; text-align: left; border: 1px solid var(--light-gray); }
       .conclusion-card h3 { color: var(--primary-color); margin-bottom: 1rem; border-bottom: 1px solid var(--light-gray); padding-bottom: 0.5rem; }
       .conclusion-card ul { list-style: none; margin-bottom: 1.5rem; }
@@ -318,7 +580,8 @@
       .report-content { background: white; padding: 1rem 2rem 2rem 2rem; border-radius: 12px; width: 100%; max-width: 800px; height: 85vh; display: flex; flex-direction: column; }
       .report-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--light-gray); padding-bottom: 1rem; margin-bottom: 1rem; }
       .report-body { overflow-y: auto; font-family: var(--font-family); padding-right: 1rem; text-align: left; flex-grow: 1; line-height: 1.6; }
-      .report-images img { max-width: 100px; border-radius: 8px; }
+      .report-images img { max-width: 100px; border-radius: 8px; margin-right: 8px; }
+      .report-qa-list { padding-left: 0; list-style-type: none; }
       .close-button { background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--gray); }
       .audio-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1001; }
       .audio-modal-content { background: var(--surface-color); padding: 2rem 3rem; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); color: var(--text-color); }

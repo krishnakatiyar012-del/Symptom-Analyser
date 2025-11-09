@@ -1,7 +1,8 @@
 {
   "description": "ArogyaAI: Your AI-powered health symptom assistant for preliminary diagnosis.",
   "requestFramePermissions": [
-    "microphone"
+    "microphone",
+    "geolocation"
   ],
-  "name": "ArogyaAI"
+  "name": "Copy of ArogyaAI"
 }
