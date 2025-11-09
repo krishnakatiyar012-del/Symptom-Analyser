@@ -261,27 +261,42 @@ const api = {
         id: 'dummy_report_flu',
         timestamp: '2024-07-23T12:00:00Z',
         data: {
-          patientComplaint: "Flu",
-          symptomImages: [], diagnosticQuestions: [],
-          preliminaryAssessment: { potentialConditions: [ { name: "Flu", confidence: "High", keyIndicators: [] } ] }
+          patientComplaint: "I've been feeling terrible for the last two days. I have a high fever, body aches all over, a bad headache, and a persistent dry cough. I'm also feeling extremely tired and have no appetite.",
+          symptomImages: [],
+          diagnosticQuestions: [
+            { question: "What is your current body temperature?", answer: "Around 102°F (38.9°C)." },
+            { question: "Are you experiencing a runny or stuffy nose?", answer: "A little bit, but the body aches are the worst part." },
+            { question: "Have you been in contact with anyone who has the flu?", answer: "Yes, my coworker was out with the flu last week." }
+          ],
+          preliminaryAssessment: { potentialConditions: [ { name: "Influenza (Flu)", confidence: "High", keyIndicators: ["High Fever", "Severe Body Aches", "Fatigue", "Dry Cough"] } ] }
         }
       },
       {
         id: 'dummy_report_cold',
-        timestamp: '2024-07-23T11:00:00Z',
+        timestamp: '2024-07-21T11:00:00Z',
         data: {
-          patientComplaint: "Common Cold",
-          symptomImages: [], diagnosticQuestions: [],
-          preliminaryAssessment: { potentialConditions: [ { name: "Common Cold", confidence: "Medium", keyIndicators: [] } ] }
+          patientComplaint: "I have a very runny nose, I'm sneezing a lot, and my throat is sore. I feel a bit tired but no fever.",
+          symptomImages: [],
+          diagnosticQuestions: [
+             { question: "Have you checked your temperature?", answer: "Yes, it's normal. No fever." },
+             { question: "How would you describe your cough?", answer: "It's a mild cough, not very deep." },
+             { question: "Are you experiencing any body aches?", answer: "No, just the runny nose and sore throat." }
+          ],
+          preliminaryAssessment: { potentialConditions: [ { name: "Common Cold", confidence: "Medium", keyIndicators: ["Runny Nose", "Sneezing", "Sore Throat", "Absence of High Fever"] } ] }
         }
       },
       {
         id: 'dummy_report_allergy',
         timestamp: '2024-07-19T09:00:00Z',
         data: {
-          patientComplaint: "Allergy",
-          symptomImages: [], diagnosticQuestions: [],
-          preliminaryAssessment: { potentialConditions: [ { name: "Allergy", confidence: "Low", keyIndicators: [] } ] }
+          patientComplaint: "My eyes are very itchy and watery, and my nose is congested. This seems to happen every year around this time. I also have a rash on my arm that appeared yesterday.",
+          symptomImages: [],
+          diagnosticQuestions: [
+              { question: "Do your symptoms worsen when you are outdoors?", answer: "Yes, definitely. Especially in the morning." },
+              { question: "Are you taking any medication for this?", answer: "No, not yet." },
+              { question: "Do you have a history of seasonal allergies?", answer: "Yes, I usually get hay fever in the spring." }
+          ],
+          preliminaryAssessment: { potentialConditions: [ { name: "Seasonal Allergies (Hay Fever)", confidence: "Low", keyIndicators: ["Itchy and Watery Eyes", "Nasal Congestion", "Seasonal Pattern", "Skin Rash"] } ] }
         }
       },
     ];
@@ -609,7 +624,7 @@ const DashboardPage = ({ user, onNavigate }: { user: User, onNavigate: (page: Ac
     }
     
     const getIconForReport = (report: StoredReport) => {
-        const title = report.data.patientComplaint.toLowerCase();
+        const title = report.data.preliminaryAssessment.potentialConditions[0]?.name.toLowerCase() || '';
         const confidence = report.data.preliminaryAssessment.potentialConditions[0]?.confidence || 'Low';
         const color = confidence === 'High' ? 'var(--danger-color)' : confidence === 'Medium' ? 'var(--warning-color)' : 'var(--secondary-color)';
         
@@ -715,7 +730,7 @@ const DashboardPage = ({ user, onNavigate }: { user: User, onNavigate: (page: Ac
                         <div key={report.id} className="report-card-small">
                             <div className="title">
                                {getIconForReport(report)}
-                               <span style={{ color: iconColor }}>{report.data.patientComplaint}</span>
+                               <span style={{ color: iconColor }}>{report.data.preliminaryAssessment.potentialConditions[0]?.name || 'Report'}</span>
                             </div>
                             <div className="date">{new Date(report.timestamp).toLocaleDateString(language, { month: 'short', day: 'numeric', year: 'numeric' })}</div>
                             <div className={tag.className}>
@@ -857,7 +872,7 @@ const ReportsPage = ({ user }: { user: User }) => {
     )}
     return (
         <div className="page-content"><h2>{t('yourReports')}</h2>{isLoading ? (<div className="loading-fullscreen" style={{height: '50vh'}}><div className="spinner"></div></div>) : reports.length === 0 ? (<p>{t('noReports')}</p>) : (
-                <div className="reports-list">{reports.map(report => (<div key={report.id} className="report-item" onClick={() => setSelectedReport(report.data)}><div className="report-item-summary"><strong>{t('complaint')}:</strong> {report.data.patientComplaint.substring(0, 50)}...</div><div className="report-item-date">{new Date(report.timestamp).toLocaleDateString()}</div></div>))}</div>)}
+                <div className="reports-list">{reports.map(report => (<div key={report.id} className="report-item" onClick={() => setSelectedReport(report.data)}><div className="report-item-summary"><strong>{report.data.preliminaryAssessment.potentialConditions[0]?.name || t('complaint')}:</strong> {(report.data.preliminaryAssessment.potentialConditions[0]?.keyIndicators || []).join(', ').substring(0,50)}...</div><div className="report-item-date">{new Date(report.timestamp).toLocaleDateString()}</div></div>))}</div>)}
         </div>
     );
 };
@@ -917,27 +932,26 @@ const App = () => {
 
   if (!authChecked) { return <div className="loading-fullscreen"><div className="spinner"></div></div>; }
   
-  // Fix: Replaced the AppContent component defined inside App's render method with an IIFE.
-  // This avoids the anti-pattern of defining components inside render, which was likely causing the obscure TypeScript error.
+  // FIX: Refactored component rendering from an IIFE to a variable. This resolves a TypeScript
+  // error where the `children` prop was incorrectly reported as missing for LanguageProvider.
+  let content: React.ReactNode;
+  if (!currentUser) {
+    content = <AuthPage onLogin={handleLogin} onSignup={handleSignup} />;
+  } else if (!currentUser.profile) {
+    content = <ProfileSetupPage user={currentUser} onSave={handleProfileSave} />;
+  } else {
+    content = (
+      <MainLayout
+        user={currentUser}
+        onLogout={handleLogout}
+        onProfileSave={handleProfileSave}
+      />
+    );
+  }
+
   return (
     <LanguageProvider user={currentUser} onProfileSave={handleProfileSave}>
-      {(() => {
-        if (!currentUser) {
-          return <AuthPage onLogin={handleLogin} onSignup={handleSignup} />;
-        }
-        if (!currentUser.profile) {
-          return (
-            <ProfileSetupPage user={currentUser} onSave={handleProfileSave} />
-          );
-        }
-        return (
-          <MainLayout
-            user={currentUser}
-            onLogout={handleLogout}
-            onProfileSave={handleProfileSave}
-          />
-        );
-      })()}
+      {content}
     </LanguageProvider>
   );
 };
